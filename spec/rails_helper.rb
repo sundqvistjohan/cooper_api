@@ -19,4 +19,6 @@ RSpec.configure do |config|
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
 
   config.include ResponseJSON
+  
+  config.include Devise::Test::IntegrationHelpers, type: :request
 end

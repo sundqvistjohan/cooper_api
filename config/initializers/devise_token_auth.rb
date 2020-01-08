@@ -52,4 +52,7 @@ DeviseTokenAuth.setup do |config|
   # If, however, you wish to integrate with legacy Devise authentication, you can
   # do so by enabling this flag. NOTE: This feature is highly experimental!
   # config.enable_standard_devise_support = false
+  config.change_headers_on_each_request = false
+  config.token_lifespan = 2.weeks
+  config.batch_request_buffer_throttle = 5.seconds
 end
